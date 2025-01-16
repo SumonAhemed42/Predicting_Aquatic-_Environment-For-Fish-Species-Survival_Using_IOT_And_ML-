@@ -84,7 +84,7 @@ This project introduces an intelligent system for aquaculture that combines **In
 - **Abdus Sabur** (1801034)
 - **Sumon Ahemed** (1801042)
 
-**Supervisor**: Suman Saha, Lecturer, Department of IoT and Robotics Engineering, BDU.
+**Supervisor**: Suman Saha, Assistant Professor, Department of Internet of Things & Robotics Engineering, BDU.
 
 ---
 
