@@ -1,0 +1,257 @@
+@import "variable";
+// @font-face {
+//   font-family: "Google sans";
+//   src: url("../res/font/Google-sans.woff2");
+// }
+// @font-face {
+//   font-family: "Google sans medium";
+//   src: url("../res/font/Google-sans-medium.woff2");
+// }
+// @font-face {
+//   font-family: "Google sans text";
+//   src: url("../res/font/Google-sans-text.woff2");
+// }
+
+body {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    font-size: 18px;
+  }
+  *,
+  div,
+  p {
+    font-family: system-ui, sans-serif;
+    font-size: 1rem;
+  }
+}
+
+.mainContainer {
+  width: 800px;
+  margin: 32px auto;
+  .coverImgAndText {
+    position: relative;
+    img {
+      width: 100%;
+      border-radius: 12px;
+    }
+    .text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      line-height: 1.5;
+      p {
+        color: white;
+      }
+      .h1 {
+        font-size: 2rem;
+        margin-bottom: 16px;
+      }
+    }
+  } //.coverImgAndText
+  .box {
+    margin-top: 16px;
+    border-radius: 20px;
+    min-height: 300px;
+    background: $lightBlue;
+    padding-bottom: 16px;
+    .navBar {
+      padding: 16px 16px 0;
+      ul {
+        display: flex;
+        gap: 16px;
+        li {
+          padding: 8px;
+          list-style: none;
+          &:hover {
+            cursor: pointer;
+            color: $blue;
+          }
+          &.active {
+            color: $blue;
+            border-bottom: 2px solid $blue;
+          }
+        }
+      }
+    } //.navBar
+    .subBox {
+      background-color: white;
+      border-radius: 20px;
+      padding: 16px;
+      margin: 16px;
+      min-height: 100px;
+      display: flex;
+      .form {
+        width: 50%;
+        .inputbox {
+          margin-bottom: 24px;
+          position: relative;
+          label {
+            position: absolute;
+            top: 8px;
+            left: 9px;
+            transition: all 0.1s linear;
+            color: $placeholder;
+            pointer-events: none;
+          }
+          input {
+            border: 1px solid $gray;
+            padding: 8px;
+            border-radius: 8px;
+            width: 100%;
+            &:focus,
+            &:valid {
+              border: 2px solid $blue;
+              & + label {
+                top: -9px;
+                left: 9px;
+                font-size: 0.8rem;
+                background: white;
+                padding: 0 4px;
+                font-weight: bold;
+                color: $blue;
+              }
+            }
+          }
+        } //.inputbox
+        .predictBtn {
+          padding: 8px;
+          cursor: pointer;
+          background-color: $blue;
+          outline: none;
+          border: 0;
+          color: white;
+          border-radius: 8px;
+          padding: 8px 16px;
+          &:hover {
+            background: #0069da;
+          }
+        }
+      } //.form
+      .resultBox {
+        border: 1px solid $gray;
+        width: 50%;
+        margin-left: 16px;
+        padding: 16px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 8px;
+        .txt1 {
+          font-size: 1.5rem;
+        }
+        img {
+          max-width: 100%;
+          max-height: 112px;
+          display: none;
+        }
+      } //.resultBox
+      .form2 {
+        width: 50%;
+        .inputbox {
+          margin-bottom: 24px;
+          position: relative;
+          .label {
+            margin-bottom: 8px;
+          }
+          input {
+            border: 1px solid $gray;
+            padding: 8px;
+            border-radius: 8px;
+            width: 100%;
+          }
+          ul {
+            box-shadow: $bxShG;
+            border-radius: 8px;
+            position: absolute;
+            background-color: white;
+            z-index: 2;
+            overflow-y: auto;
+            max-height: 300px;
+            width: 100%;
+            display: none;
+            li {
+              padding: 8px 16px;
+              border-bottom: 1px solid $lightGray;
+              &:hover {
+                background-color: $lightBlue;
+                cursor: pointer;
+              }
+            }
+          }
+        } //.inputbox
+        .predictBtn {
+          padding: 8px;
+          cursor: pointer;
+          background-color: $blue;
+          outline: none;
+          border: 0;
+          color: white;
+          border-radius: 8px;
+          padding: 8px 16px;
+          &:hover {
+            background: #0069da;
+          }
+        }
+      } //.form
+      .resultBox2 {
+        border: 1px solid $gray;
+        width: 50%;
+        margin-left: 16px;
+        padding: 16px;
+        border-radius: 8px;
+        .h1 {
+          background-color: $blue;
+          color: white;
+          padding: 8px;
+          width: 100%;
+          text-align: center;
+          margin-bottom: 16px;
+        }
+        .txt {
+          line-height: 2;
+          text-align: center;
+        }
+      } //.resultBox
+      .realTimeSectionCol1 {
+        width: 50%;
+        padding: 16px;
+        border-radius: 8px;
+        .h1 {
+          background-color: $blue;
+          color: white;
+          padding: 8px;
+          width: 100%;
+          text-align: center;
+          margin-bottom: 16px;
+        }
+        .txt {
+          line-height: 2;
+          text-align: center;
+        }
+      }
+    }
+  } //.box
+} //.mainContainer
+
+.lineTag {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  .line {
+    width: 50px;
+    height: 4px;
+    background-color: blue;
+  }
+}
